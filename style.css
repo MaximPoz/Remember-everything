@@ -1,0 +1,330 @@
+/* ==========================================================================
+   Тетрадь для практики JS — стили
+   Палитра: бумага + чернила + мох (без клише кремово-терракотового дуэта)
+   ========================================================================== */
+
+:root {
+  --paper: #f1efe8;
+  --paper-line: #d9d3c4;
+  --ink: #232722;
+  --ink-soft: #565c53;
+  --moss: #3c6a56;
+  --moss-dark: #2a4c3e;
+  --rust: #a15c3a;
+  --card-bg: #ffffff;
+  --code-bg: #e7e4d8;
+  --radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.5rem 5rem;
+  background:
+    repeating-linear-gradient(to bottom,
+      transparent,
+      transparent 34px,
+      var(--paper-line) 35px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--moss-dark);
+  border-bottom: 3px solid var(--moss-dark);
+  padding-bottom: 0.6rem;
+}
+
+body>div {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* Каждая задача — цельный листок с рамкой */
+section {
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card-bg);
+}
+
+h3 {
+  margin: 0;
+  padding: 1.1rem 1.25rem 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+pre {
+  margin: 0;
+  padding: 0.9rem 1.25rem;
+  background: var(--code-bg);
+  border-top: 1px solid var(--paper-line);
+  overflow-x: auto;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  white-space: pre;
+}
+
+p#result {
+  margin: 0;
+  padding: 0 1.25rem 1.1rem;
+  font-size: 1rem;
+  color: var(--ink);
+  min-height: 1.2em;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  border-top: 1px solid var(--moss-dark);
+  background: var(--moss);
+  color: #fdfcf8;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background: var(--rust);
+}
+
+button:active {
+  background: var(--moss-dark);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 2rem 1rem 3rem;
+  }
+
+  h1 {
+    padding-bottom: 0.4rem;
+  }
+}
+
+.zag {
+  border: 1px solid
+}
+
+
+/* Стили для БД */
+.input-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Стили для инпутов */
+input[type="text"],
+input[type="email"] {
+  flex: 1;
+  min-width: 240px;
+  padding: 14px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Плейсхолдеры */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+/* Фокус */
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+/* ✅ Важно! Валидация только для заполненных полей */
+input[type="email"]:valid:not(:placeholder-shown) {
+  border-color: #48bb78;
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.2);
+}
+
+input[type="email"]:invalid:not(:placeholder-shown) {
+  border-color: #fc8181;
+  box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.2);
+}
+
+/* Для текстового поля */
+input[type="text"]:valid:not(:placeholder-shown) {
+  border-color: #48bb78;
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.2);
+}
+
+/* Список пользователей */
+.user-list-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-container h2 {
+  color: #2d3748;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+#usersList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#usersList li {
+  padding: 12px 18px;
+  margin-bottom: 8px;
+  background: #f7fafc;
+  border-radius: 10px;
+  color: #2d3748;
+  font-size: 15px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#usersList li:hover {
+  background: #edf2f7;
+  transform: translateX(5px);
+}
+
+#usersList li::after {
+  content: '✕';
+  color: #fc8181;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#usersList li:hover::after {
+  opacity: 1;
+}
+
+
+/* Титулка Remember everything */
+.title {
+  /* Убираем стандартное оформление ссылки */
+  text-decoration: none;
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+  /* Делаем как настоящий заголовок */
+  display: inline-block;
+  padding: 10px 20px;
+
+  /* Плавные переходы */
+  transition: all 0.3s ease;
+}
+
+/* Эффект при наведении */
+.title:hover {
+  color: #035811;
+  transform: scale(1.05);
+}
+
+/* Эффект при клике */
+.title:active {
+  transform: scale(0.95);
+}
+
+
+/* Для ссылок на титулке */
+/* ===== Базовые стили для ссылок ===== */
+.link {
+    /* Основные стили */
+    display: inline-block;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* ===== Эффекты при наведении ===== */
+.link:hover {
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.08);
+    transform: translateX(5px);
+}
+
+/* ===== Эффект при клике ===== */
+.link:active {
+    transform: scale(0.95);
+    color: #2980b9;
+}
+
+/* ===== Декоративное подчеркивание ===== */
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.link:hover::after {
+    width: calc(100% - 30px);
+}

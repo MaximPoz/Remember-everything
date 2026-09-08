@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><a class="title" href="index.html">Remember everything</a></h1>
+    <div>
+
+        <!--middle task-3. 1 -->
+        <section>
+            <h3>при наведении на любой элемент на странице, он выделялся красной рамкой</h3>
+            <div>
+                <p id="borderResult" >Вкл/выкл</p>
+                <button onclick="toggleBorder()" class="borderButton">Взаимодействовать</button>
+            </div>
+        </section>
+
+        <!--middle task-3. 2 -->
+        <section>
+            <h3>Калькулятор</h3>
+            <div>
+                <input id="calkInput" type="text" placeholder="Сторона квадрата">
+                <p id="calkResult">Тут будет ответ</p>
+                <button class="calkButton">Вычеслить</button>
+            </div>
+        </section>
+
+
+
+        <!--middle task-3. 3 -->
+        <section>
+            <h3>ToDo list</h3>
+            <div>
+                <input id="todoInput" type="text" placeholder="Заметка">
+                <button id="todoButton">Добавить</button>
+                <ul id="taskList">
+
+                </ul>
+            </div>
+        </section>
+
+
+
+
+        <!--easy task-3. 1-5 -->
+        <section>
+            <h2>Задания easy 1-5</h2>
+            <h3>Задание 1</h3>
+            <div class="q3"></div>
+
+            <h3>Задание 2</h3>
+            <p id="elem1">1</p>
+            <p id="elem2">2</p>
+            <p id="elem3">3</p>
+
+            <h3>Задание 3</h3>
+            <p class="www">text</p>
+            <p class="www">text</p>
+
+            <h3>Задание 4</h3>
+            <button class="btn-1">Число 1</button>
+            <button class="btn-2">Число 2</button>
+            <button class="btn-3">Число 3</button>
+
+            <h3>Задание 5</h3>
+            <div id="root"></div>
+        </section>
+
+
+    </div>
+    <script src="task-3.js"></script>
+</body>
+
+</html>
