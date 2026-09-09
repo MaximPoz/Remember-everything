@@ -328,3 +328,15 @@ input[type="text"]:valid:not(:placeholder-shown) {
 .link:hover::after {
     width: calc(100% - 30px);
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.prod-img {
+    width: 380px;
+    height: auto;
+    display: block;
+}
