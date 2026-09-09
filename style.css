@@ -287,56 +287,70 @@ input[type="text"]:valid:not(:placeholder-shown) {
 /* Для ссылок на титулке */
 /* ===== Базовые стили для ссылок ===== */
 .link {
-    /* Основные стили */
-    display: inline-block;
-    text-decoration: none;
-    color: #2c3e50;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    padding: 8px 15px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    position: relative;
+  /* Основные стили */
+  display: inline-block;
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 /* ===== Эффекты при наведении ===== */
 .link:hover {
-    color: #3498db;
-    background: rgba(52, 152, 219, 0.08);
-    transform: translateX(5px);
+  color: #3498db;
+  background: rgba(52, 152, 219, 0.08);
+  transform: translateX(5px);
 }
 
 /* ===== Эффект при клике ===== */
 .link:active {
-    transform: scale(0.95);
-    color: #2980b9;
+  transform: scale(0.95);
+  color: #2980b9;
 }
 
 /* ===== Декоративное подчеркивание ===== */
 .link::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 15px;
-    width: 0;
-    height: 2px;
-    background: #3498db;
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 15px;
+  width: 0;
+  height: 2px;
+  background: #3498db;
+  transition: width 0.3s ease;
 }
 
 .link:hover::after {
-    width: calc(100% - 30px);
+  width: calc(100% - 30px);
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .prod-img {
-    width: 380px;
-    height: auto;
-    display: block;
+  width: 380px;
+  height: auto;
+  display: block;
+}
+
+.menu {
+  border: 1px solid green;
+  height: auto;
+  width: 200px;
+  position: absolute;
+  left: -150px;
+}
+
+.btnBurger {
+  position: absolute;
+  right: 5px;
+  list-style-type: none
 }
