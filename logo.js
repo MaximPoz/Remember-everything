@@ -1,24 +1,23 @@
 const logo = document.querySelector('.prod-img')
 
-let isPaused = false
-let degrees = 0
-
-function animate() {
-    if(!isPaused){
-        degrees++
-        logo.style.transform = `rotate(${degrees}deg)`
-
-        requestAnimationFrame(animate)
+const animation = logo.animate(
+    [
+        {transform: 'rotate(0deg)'},
+        {transform: 'rotate(360deg)'}
+    ],
+    {
+        duration: 3000,
+        iterations: Infinity,
     }
-}
+)
 
-animate()
+animation.pause()
 
-logo.addEventListener('mouseenter', ()=>{
-    isPaused = true
+logo.addEventListener('mouseenter', () => {
+    animation.play()
 })
 
-logo.addEventListener('mouseleave', ()=>{
-    isPaused = false
-    animate()
+
+logo.addEventListener('mouseleave', () => {
+    animation.pause()
 })
