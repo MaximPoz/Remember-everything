@@ -71,13 +71,19 @@ let todoInput = document.getElementById('todoInput')
 let todoButton = document.getElementById('todoButton')
 let taskList = document.getElementById('taskList')
 
-todoButton.addEventListener('click', ()=> {
+let todoFunc = () => {
     let li = document.createElement('li')
     li.textContent = todoInput.value
     taskList.append(li)
     todoInput.value = ''
-})
+}
 
+todoButton.addEventListener('click', todoFunc)
+todoInput.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+        todoFunc()
+    }
+})
 
 
 
