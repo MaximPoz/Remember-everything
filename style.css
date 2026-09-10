@@ -354,3 +354,23 @@ input[type="text"]:valid:not(:placeholder-shown) {
   right: 5px;
   list-style-type: none
 }
+
+.square {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: green;
+  position: absolute;
+  left: 250px;
+  cursor: grab;
+  /* user-select: none;
+  touch-action: none; */
+}
+.square:active {
+  cursor: grabbing;
+}
+
+#btnSquare{
+  width: 30%;
+  margin-left: 450px;
+}
