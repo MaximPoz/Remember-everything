@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><a class="title" href="index.html">Remember everything</a></h1>
+    <div>
+        <section class="validator">
+            <h3>Реализуйте класс Validator</h3>
+            <h2>Ответы смотреть в консоле</h2>
+            <pre><code>
+<b>Задание Middle</b>
+- isRangedNumber - принимает на вход два аргумента, первый аргумент - это само
+число,второй - это массив из двух чисел, где первое число - начало диапазона 
+включительно, а второе - конец диапазона включительно, и возвращает true, если 
+число попадает в диапазон, иначе false;
+<b>console.log(validator.isRangedNumber(1, [6, 1])) // => true
+console.log(validator.isRangedNumber(2, [4, 8])) // => false</b>
+
+- isPhoneNumber - принимает на вход строку (номер телефона), если в телефоне 11 
+целых не отрицательных чисел, сам номер начинается с "+7" и не содержит других 
+символов кроме пробела, то вернуть true, иначе false
+<b>console.log(validator.isPhoneNumber("+7 999 999 99 99")) // => true
+console.log(validator.isPhoneNumber("a 999 999")) // => false
+console.log(validator.isPhoneNumber("9 999 999 99 99")) // => false</b>
+            </code></pre>
+
+        </section>
+    </div>
+
+
+
+    </div>
+    <script src="task-5.js"></script>
+</body>
+
+</html>

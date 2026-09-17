@@ -41,8 +41,8 @@ function init() {
             emailEL.value = ''
         }
     })
-
-    formatMessage(users)
 }
 
 init()
+
+
